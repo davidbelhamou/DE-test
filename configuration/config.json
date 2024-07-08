@@ -1,0 +1,10 @@
+{
+  "object_detection": {
+    "route_to_survey": "data",
+    "file_pattern":  "objects_detection_(\\d{4}).json"
+  },
+  "vehicles_status": {
+    "route_to_survey": "data",
+    "file_pattern": "vehicles_status_(\\d{4}).json"
+  }
+}
