@@ -22,18 +22,20 @@ class Configuration:
 
     @property
     def create_object_detection_route(self):
+        # Extract from the config.json file the items for object_sdetection
         conf_dict = {key: val for key, val in self.configuration['object_detection'].items() if
                      key in Route.__annotations__}
         return Route(**conf_dict)
 
     @property
     def create_vehicles_status_route(self):
+        # Extract from the config.json file the items for vehicles_status
         conf_dict = {key: val for key, val in self.configuration['vehicles_status'].items() if
                      key in Route.__annotations__}
         return Route(**conf_dict)
 
 
-# Configure the logger
+# Configure basic logger
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',

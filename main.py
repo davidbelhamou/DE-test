@@ -8,8 +8,10 @@ from db_generator import init_db
 import threading
 
 if __name__ == '__main__':
+    # initialize the db + configuration
     init_db()
     conf = Configuration()
+    # Create the 2 Thread, one for generating data the other one to monitor the specific directory
     generator_data = threading.Thread(target=generate_data.main, args=(conf,))
     watcher_data = threading.Thread(target=monitor_directory, args=(conf.create_vehicles_status_route,))
     logger.info('Start Main prog')

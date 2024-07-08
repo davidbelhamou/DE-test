@@ -40,6 +40,7 @@ def write_json_file(data: list, filename_suffix: str, path: Path):
 
 
 def main(conf: Configuration):
+    # continuously generate fake data file
     while True:
         data_dir = Path(conf.create_vehicles_status_route.route_to_survey)
         data_dir.mkdir(parents=True, exist_ok=True)
