@@ -49,5 +49,6 @@ Also, for handling many more file types, I would consider using more threads or 
 
 # How to run
 
-git clone the repo
-cd to 
+- git clone the repo
+- cd to mobileye-interview directory
+- run command python main.py
