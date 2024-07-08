@@ -47,6 +47,8 @@ In this implementation, the two types of files are generated in the same directo
 I would separate them.
 Also, for handling many more file types, I would consider using more threads or multiprocessing.
 
+Other consideration would be about Indexing some fields, for better performance like timestamp fields.
+
 # How to run
 
 - git clone the repo
