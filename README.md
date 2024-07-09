@@ -1,22 +1,10 @@
 # Overview
 This project demonstrates the use of file system monitoring and database operations in Python.
-The codebase consists of three main functionalities implemented in separate threads:
-
-1. Generating Fake Data: One thread is responsible for generating fake data files in a designated directory every 5 seconds.
-2. Monitoring the Directory: Another thread uses the watchdog library to monitor the directory for new files and insert these files into an SQLite database based on their filenames.
-3. Inserting Data into SQLite database
+The codebase consists of two main functionalities implemented in separate threads:
 
 Design and Implementation:
-- Generating Fake Data: This code generates fake JSON data for vehicle status and object detection, 
-writes it to a specific directory with, and repeats this process every 5 seconds.
-The data files are named based on the table they are intended to be inserted into,
-indicating the appropriate database table.
-
-
-- Monitoring the Directory
-Utilizes the watchdog library to watch the data directory.
-When a new file is detected, the MyHandler class handles the file creation event.
-The handler reads the new file and inserts its data into the appropriate table.
+1. Generating Fake Data: One thread is responsible for generating fake data files in a designated directory every 5 seconds.
+2. Monitoring the Directory: Another thread uses the watchdog library to monitor the directory for new files and insert these files into an SQLite database based on their filenames.
 
 filename convention:
 <table_name>_timestamp.json
@@ -52,5 +40,5 @@ Other consideration would be about Indexing some fields, for better performance 
 # How to run
 
 - git clone the repo
-- cd to mobileye-interview directory
+- cd to DE-test directory
 - run command python main.py
